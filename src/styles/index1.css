@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+/* SASS template 1.0.0 Pre-alpha was implemented by Wlodzimierz Pavlov */
+body, html {
+  font-family: sans-serif; }
+
+.first-block {
+  padding: 20px;
+  margin: 20px;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #0568e1; }
+
+/*# sourceMappingURL=index1.css.map */

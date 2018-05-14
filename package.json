@@ -1,0 +1,9 @@
+{
+  "name": "sass-learning-app",
+  "version": "1.0.0",
+  "description": "Simple sass application for personal learning purposes and tasks",
+  "main": "index.js",
+  "repository": "https://github.com/pavlovcoder/sass-learning-app.git",
+  "author": "Wlodzimierz Pavlov",
+  "license": "MIT"
+}

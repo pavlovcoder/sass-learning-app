@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu')
 
+$section-border:#ff0066
+$firefox-back: #ff9900
+$translucent-red: rgba(255, 0, 0, 0.5)
+
 body, html
   font-family: 'Titillium Web', sans-serif
   font-size: 20px
@@ -26,3 +30,53 @@ button
 
 .clicked
   background: linear-gradient(to bottom, #00cc00, #009900)
+
+section
+  height: 30%
+  padding: 20px
+  margin: 20px
+
+  &:nth-child(2)
+    $bor-con: 5px solid $section-border !global
+    border: $bor-con
+
+  &:nth-child(1)
+    $border: $bor-con
+
+@mixin firefox-message($selector)
+  body #{selector}:before
+    content: 'Hi, Firefox users!'
+    background-color: $firefox-back
+    color: #ffffff
+    font-weight: 600
+    text-align: center
+    font-size: 22px
+
+@include firefox-message('.second-block')
+$class-name: new-class
+$attr1: background-origin
+$attr2: background-attachment
+$attr3: background-clip
+$attr4: padding
+
+.third-block
+  $width: 1000px
+  width: $width/2
+  width: round(1.5)/2
+  height: (500px/2)
+  margin-left: 5px + 8px/2px
+  font: (italic bold 10px/8px)
+  $font-size: 12px
+  $line-height: 30px
+  font: #{$font-size} / #{$line-height}
+  color: opacify($translucent-red, 0.45)
+  background-color: transparentize($translucent-red, 0.2)
+  //For IE-web browser color filtering as: $AABBCCDD:
+  background: linear-gradient(to bottom, #{ie-hex-str(yellow)} 0%, #{ie-hex-str($translucent-red)} 100%)
+  
+  .#{$class-name}
+    #{$attr1}: content-box
+    #{$attr2}: fixed
+    #{$attr3}: content-box
+    #{$attr4}-top: 30px
+    #{$attr4}-bottom: 20px

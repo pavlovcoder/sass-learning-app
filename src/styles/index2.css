@@ -25,4 +25,36 @@ button {
 .clicked {
   background: linear-gradient(to bottom, #00cc00, #009900); }
 
+section {
+  height: 30%;
+  padding: 20px;
+  margin: 20px; }
+  section:nth-child(2) {
+    border: 5px solid #ff0066; }
+
+body selector:before {
+  content: "Hi, Firefox users!";
+  background-color: #ff9900;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  font-size: 22px; }
+
+.third-block {
+  width: 500px;
+  width: 1;
+  height: 250px;
+  margin-left: 9px;
+  font: italic bold 10px/8px;
+  font: 12px / 30px;
+  color: rgba(255, 0, 0, 0.95);
+  background-color: rgba(255, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #FFFFFF00 0%, #80FF0000 100%); }
+  .third-block .new-class {
+    background-origin: content-box;
+    background-attachment: fixed;
+    background-clip: content-box;
+    padding-top: 30px;
+    padding-bottom: 20px; }
+
 /*# sourceMappingURL=index2.css.map */

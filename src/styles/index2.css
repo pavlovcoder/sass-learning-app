@@ -57,4 +57,56 @@ body selector:before {
     padding-top: 30px;
     padding-bottom: 20px; }
 
+.fourth-block {
+  content: "Content B"; }
+  .fourth-block:hover {
+    color: #ff0000; }
+
+.fifth-block {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px; }
+
+.sixth-block {
+  background: linear-gradient(to bottom, red 0%, blue 100%);
+  color: #ffffff;
+  padding: 50px; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .sidebar {
+    width: 600px;
+    height: 500px;
+    border: 2px double #ff0066; } }
+.error, .seriousError {
+  border: 1px dotted #ff9900;
+  background-color: #ff0000; }
+
+.attention, .seriousError {
+  font-size: 3em;
+  background-color: #ff0066; }
+
+.seriousError {
+  border-width: 3px; }
+
+.errorBlock {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.mainError, .criticalError, .fatalError {
+  width: 35%;
+  height: 20%;
+  border: 2px dotted #000000; }
+
+.criticalError, .fatalError {
+  background-color: #ff0000;
+  color: #fff; }
+
+.fatalError {
+  font-size: 30px;
+  text-transform: uppercase; }
+
 /*# sourceMappingURL=index2.css.map */

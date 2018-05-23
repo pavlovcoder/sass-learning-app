@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;EACV,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO;EACd,OAAO,EAAE,IAAI",
+"sources": ["../../app/import/imported1.sass"],
+"names": [],
+"file": "imported1.css"
+}

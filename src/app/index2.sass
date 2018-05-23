@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu')
-
-$section-border:#ff0066
-$firefox-back: #ff9900
-$translucent-red: rgba(255, 0, 0, 0.5)
+@import 'partials/variables'
 
 body, html
   font-family: 'Titillium Web', sans-serif
@@ -80,3 +77,62 @@ $attr4: padding
     #{$attr3}: content-box
     #{$attr4}-top: 30px
     #{$attr4}-bottom: 20px
+
+=does-parent-exist
+  @if &
+    &:hover
+      color: $red-color
+  @else
+    a
+      color: $red-color
+
+.fourth-block
+  +does-parent-exist
+  content: $content_B
+
+@import 'import/imported1', 'import/imported2'
+
+@media #{$media} and (#{$feature}: #{$value}) 
+  .sidebar
+    width: 600px
+    height: 500px
+    border: 2px double $section-border
+
+//Testing extends:
+.error
+  border: 1px dotted $firefox-back
+  background-color: $red-color
+
+.attention
+  font-size: 3em
+  background-color: $section-border
+
+.seriousError
+  @extend .error, .attention
+  border-width: 3px
+
+//Chaining extends:
+.errorBlock
+  width: 100vw
+  height: 100vh
+  text-align: center
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+.mainError
+  width: 35%
+  height: 20%
+  border: 2px dotted $main-error-border
+
+.criticalError
+  @extend .mainError
+  background-color: $red-color
+  color: $error-color
+
+.fatalError
+  @extend .criticalError
+  font-size: 30px
+  text-transform: uppercase
+
+

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web|Ubuntu')
 @import 'partials/variables'
+@import 'partials/mixins'
 
 body, html
   font-family: 'Titillium Web', sans-serif
@@ -134,5 +135,78 @@ $attr4: padding
   @extend .criticalError
   font-size: 30px
   text-transform: uppercase
+
+#context a%extreme
+  color: $section-border
+  font-weight: bold
+  font-size: 2em
+
+.notice
+  @extend %extreme !optional
+  text-wrap: initial
+  line-height: 2em
+  font-size: 21px
+
+@media print 
+  .page
+    width: 10vh
+    height: 50vw
+    .sub-page
+      border-radius: 30%
+      @at-root (without: media)
+        color: $section-border
+
+@debug 10em - 5em
+
+.location-area
+  +adjust-location(34px, 50px)
+  $location-padding: 5px
+  margin: if($location-padding > 10, 5px, 10px)
+
+$car: Renault
+.cars-select
+  @if $car == Ford
+    background-color: $ford-color
+  @else if $car == Porsche
+    background-color: $porsche-color
+  @else if $car == Mercedes
+    background-color: $mercedes-color
+  @else 
+    background-color: $renault-color
+
+@for $i from 1 through 3
+  .user-disabled-#{$i}
+    &::before
+      content: 'ID: #{$i}'
+    padding: 10px 0
+    margin: 2px 0
+    text-align: left
+
+@for $item from 25 to 28
+  .e-item-#{$item}
+    margin-left: #{$item}px
+
+@each $flower in Anemon, Mandevilla, Freesia, Hebe, Rose, Peony, Begonia
+  .#{$flower}
+    &::after
+      content: #{$flower}
+
+//Using maps as a lists with value for each statement:
+@each $header, $size in (h2: 4em, h4: 3em, h5: 2em, h6: 1em)
+  #{$header}
+    font-size: $size
+
+//Using while statement for creating more complicable contstructions:
+$index: 3
+$color-status: $status-color-1 
+@while $index > 0
+  @if $index == 1
+    $color-status: $status-color-3
+  @else 
+    $color-status: $status-color-2
+  $index: $index - 1
+  .rocket-status-#{$index}
+    background-color: $color-status
+    
 
 

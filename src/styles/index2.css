@@ -109,4 +109,104 @@ body selector:before {
   font-size: 30px;
   text-transform: uppercase; }
 
+#context a.notice {
+  color: #ff0066;
+  font-weight: bold;
+  font-size: 2em; }
+
+.notice {
+  text-wrap: initial;
+  line-height: 2em;
+  font-size: 21px; }
+
+@media print {
+  .page {
+    width: 10vh;
+    height: 50vw; }
+    .page .sub-page {
+      border-radius: 30%; } }
+    .page .sub-page {
+      color: #ff0066; }
+
+.location-area {
+  position: relative;
+  left: 34px;
+  top: 50px;
+  margin: 10px; }
+
+.cars-select {
+  background-color: #fefe1b; }
+
+.user-disabled-1 {
+  padding: 10px 0;
+  margin: 2px 0;
+  text-align: left; }
+  .user-disabled-1::before {
+    content: "ID: 1"; }
+
+.user-disabled-2 {
+  padding: 10px 0;
+  margin: 2px 0;
+  text-align: left; }
+  .user-disabled-2::before {
+    content: "ID: 2"; }
+
+.user-disabled-3 {
+  padding: 10px 0;
+  margin: 2px 0;
+  text-align: left; }
+  .user-disabled-3::before {
+    content: "ID: 3"; }
+
+.e-item-25 {
+  margin-left: 25px; }
+
+.e-item-26 {
+  margin-left: 26px; }
+
+.e-item-27 {
+  margin-left: 27px; }
+
+.Anemon::after {
+  content: Anemon; }
+
+.Mandevilla::after {
+  content: Mandevilla; }
+
+.Freesia::after {
+  content: Freesia; }
+
+.Hebe::after {
+  content: Hebe; }
+
+.Rose::after {
+  content: Rose; }
+
+.Peony::after {
+  content: Peony; }
+
+.Begonia::after {
+  content: Begonia; }
+
+h2 {
+  font-size: 4em; }
+
+h4 {
+  font-size: 3em; }
+
+h5 {
+  font-size: 2em; }
+
+h6 {
+  font-size: 1em; }
+
+.rocket-status-2 {
+  background-color: #fefe1b; }
+
+.rocket-status-1 {
+  background-color: #fefe1b; }
+
+.rocket-status-0 {
+  background-color: #1bfe1b; }
+
 /*# sourceMappingURL=index2.css.map */

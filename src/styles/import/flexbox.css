@@ -1,6 +1,6 @@
 .flexbox-block {
   background-color: #4d4c4c;
-  color: #fff;
+  color: #ffffff;
   float: left;
   width: 94.9%;
   text-align: center;
@@ -32,7 +32,6 @@
       margin: 0; }
   .flexbox-block .flexbox-ctn {
     width: 100%;
-    outline: 1px solid red;
     height: 250px;
     margin-bottom: 2.5%; }
   .flexbox-block .flexbox-container {
@@ -41,10 +40,93 @@
     outline: 5px solid #817e7e;
     float: left;
     margin: 0 2.5%;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative;
+    display: flex; }
+    .flexbox-block .flexbox-container .mini-title {
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: #817e7e;
+      color: #4d4c4c;
+      height: 30px;
+      padding: 20px 0;
+      margin: 0;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .flexbox-block .flexbox-container:hover {
       box-shadow: 0 1px 5px 6px #1f1e1e;
       transition: all 0.1s ease;
       outline: 5px solid #fd990d; }
+      .flexbox-block .flexbox-container:hover .mini-title {
+        color: #fd990d; }
+      .flexbox-block .flexbox-container:hover .subitem-1 {
+        background-color: #fd990d; }
+      .flexbox-block .flexbox-container:hover .subitem-2 {
+        background-color: #fd990d; }
+      .flexbox-block .flexbox-container:hover .subitem-3 {
+        background-color: #fd990d; }
+      .flexbox-block .flexbox-container:hover .subitem-4 {
+        background-color: #fd990d; }
+
+.subitem-1 {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 30px;
+  height: 45px;
+  background-color: #817e7e;
+  margin: 10px;
+  float: left; }
+  .subitem-1:hover {
+    outline: 3px solid #ffffff; }
+
+.subitem-2 {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 55px;
+  height: 30px;
+  background-color: #817e7e;
+  margin: 10px;
+  float: left; }
+  .subitem-2:hover {
+    outline: 3px solid #ffffff; }
+
+.subitem-3 {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 60px;
+  background-color: #817e7e;
+  margin: 10px;
+  float: left; }
+  .subitem-3:hover {
+    outline: 3px solid #ffffff; }
+
+.subitem-4 {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  width: 20px;
+  height: 40px;
+  background-color: #817e7e;
+  margin: 10px;
+  float: left; }
+  .subitem-4:hover {
+    outline: 3px solid #ffffff; }
 
 /*# sourceMappingURL=flexbox.css.map */

@@ -1,4 +1,5 @@
 @import '../partials/variables'
+@import '../partials/mixins'
 
 .flexbox-block
   background-color: $flexbox-main
@@ -38,7 +39,6 @@
 
   .flexbox-ctn
     width: 100%
-    outline: 1px solid red
     height: 250px
     margin-bottom: 2.5%
 
@@ -49,8 +49,64 @@
     float: left
     margin: 0 2.5%
     cursor: pointer
+    position: relative
+    display: flex
+
+    .mini-title
+      +transition(all .2s ease)
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      background-color: $flexbox-border
+      color: $flexbox-main
+      height: 30px
+      padding: 20px 0
+      margin: 0
+      font-size: 18px
+      display: flex
+      align-items: center
+      justify-content: center
     
     &:hover
       box-shadow: 0 1px 5px 6px $box-shadow-color
       transition: all .1s ease
       outline: 5px solid $flexbox-border-hover
+
+      .mini-title
+        color: $flexbox-border-hover
+
+      @for $i from 1 through 4
+        .subitem-#{$i}
+          background-color: $flexbox-border-hover
+
+$width-item: 40px
+$height-item: 20px
+
+@for $i from 1 through 4
+
+  @if $i == 1
+    $width-item: 30px
+    $height-item: 45px
+  @else if $i == 2
+    $width-item: 55px
+    $height-item: 30px
+  @else if $i == 3
+    $width-item: 40px
+    $height-item: 60px
+  @else 
+    $width-item: 20px
+    $height-item: 40px
+
+  .subitem-#{$i}
+    +transition(all .2s ease)
+    width: $width-item
+    height: $height-item
+    background-color: $flexbox-border
+    margin: 10px
+    float: left
+
+    &:hover
+      outline: 3px solid $error-color
+  

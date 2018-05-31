@@ -206,6 +206,17 @@ $color-status: $status-color-1
   $index: $index - 1
   .rocket-status-#{$index}
     background-color: $color-status
+
+$color-values: #ff0000, #00ff00, #0000ff
+$color-map: (text: #00ff00, background: #0000ff, border: #ff0000)
+
+.mixin-class-test
+  +sexy-border(blue)
+  +colors($color-values...)
+
+.mixin-class-test-2
+  +sexy-border(orange, 3em)
+  +colors($color-map...)
     
 
 

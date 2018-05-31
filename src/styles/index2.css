@@ -340,4 +340,20 @@ h6 {
 .rocket-status-0 {
   background-color: #1bfe1b; }
 
+.mixin-class-test {
+  border-color: blue;
+  border-width: 1in;
+  border-style: double;
+  color: #ff0000;
+  background-color: #00ff00;
+  border-color: #0000ff; }
+
+.mixin-class-test-2 {
+  border-color: orange;
+  border-width: 3em;
+  border-style: double;
+  color: #00ff00;
+  background-color: #0000ff;
+  border-color: #ff0000; }
+
 /*# sourceMappingURL=index2.css.map */

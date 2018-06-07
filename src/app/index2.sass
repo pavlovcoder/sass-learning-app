@@ -217,6 +217,26 @@ $color-map: (text: #00ff00, background: #0000ff, border: #ff0000)
 .mixin-class-test-2
   +sexy-border(orange, 3em)
   +colors($color-map...)
+
+$margin-top-side: 5px
+$margin-bottom-side: 8px
+$margin-horizontal-sides: 4px
+.special-side-block
+  +margin-sides
+    padding-top: $margin-top-side
+    padding-bottom: $margin-bottom-side
+    padding-left: $margin-horizontal-sides
+    padding-right: $margin-horizontal-sides
+
+$grid-width: 100px
+$gutter-width: 20px
+
+@function grid-width-func($a, $b, $c) 
+  $answ: $a / ( $b * $c ) + ( $grid-width - $a * $gutter-width )
+  @return $answ
+
+.custom-function 
+  width: grid-width-func(80, 40, 30)
     
 
 

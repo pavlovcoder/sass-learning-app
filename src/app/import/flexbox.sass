@@ -42,6 +42,45 @@
     height: 250px
     margin-bottom: 2.5%
 
+  .flexbox-ctn.items
+    
+    .flexbox-container
+      &:nth-child(1)
+        
+        .subitem-1
+          order: 3
+
+        .subitem-2
+          order: 4
+
+        .subitem-3
+          order: 2
+
+        .subitem-4
+          order: 1
+
+      &:nth-child(2)
+        
+        .subitem-1
+          flex-grow: 1
+
+        .subitem-2
+          flex-grow: 1
+
+        .subitem-3
+          flex-grow: 2
+
+        .subitem-4
+          flex-grow: 1
+
+      &:nth-child(3)
+
+        .subitem-1
+          align-self: center
+
+        .subitem-2
+          align-self: baseline
+
   .flexbox-container
     width: 20%
     height: 250px
@@ -109,4 +148,26 @@ $height-item: 20px
 
     &:hover
       outline: 3px solid $error-color
+
+$first-flex-back: #a9947b
+
+%flex-crossbrowser
+  display: -webkit-box //for safari
+  display: -moz-box //for mozilla
+  display: -ms-flexbox //for ms explorer
+  display: -webkit-flex //for webkit 
+  display: flex
+
+.first-flex-container
+  @extend %flex-crossbrowser
+  outline: 1px solid red
+  padding: 0
+  margin: 20px
+  background-color: $first-flex-back
+  list-style: none
+  height: 300px
+  position: relative
+  float: left
+  -webkit-flex-flow: row wrap
+  justify-content: space-around
   

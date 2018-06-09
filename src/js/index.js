@@ -7,12 +7,17 @@ let titleObject = {
     'row',
     'row-reverse',
     'column',
-    'column-revers'
-  ]
+    'column-reverse'
+  ],
+  1 : [
+    'order',
+    'flex-grow',
+    'align-self',
+    'flex-basis'
+  ],
 }
 
 for (const x of flexCtn) {
-  console.log(counter);
   x.childNodes.forEach(child => {
     for(let i = 1; i <= 4; i++) {
       let subItem = document.createElement('div');
@@ -24,14 +29,24 @@ for (const x of flexCtn) {
     miniTitle.classList.add('mini-title');
     child.appendChild(miniTitle);
   });
+  console.log(x);
   appendTitle(counter, x)
   counter++;
 }
 
 function appendTitle(counter, miniTitle) {
-  console.log(miniTitle.children);
   let getTitles = Array.from(miniTitle.getElementsByClassName('mini-title'));
+  let getCtn = miniTitle.children;
   for (let i = 0; i < 4; i++) {
     getTitles[i].innerHTML = titleObject[counter][i];
+    appendFlexStyle(counter, getCtn[i], i);
+  }
+}
+
+function appendFlexStyle(counter, selector, index) {
+  switch (counter) {
+    case 0:
+      selector.style.flexDirection = titleObject[counter][index];
+    break;
   }
 }

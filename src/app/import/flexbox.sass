@@ -1,5 +1,6 @@
 @import '../partials/variables'
 @import '../partials/mixins'
+@import url('https://fonts.googleapis.com/css?family=Abel')
 
 .flexbox-block
   background-color: $flexbox-main
@@ -150,6 +151,7 @@ $height-item: 20px
       outline: 3px solid $error-color
 
 $first-flex-back: #a9947b
+$first-flex-border: #595142
 
 %flex-crossbrowser
   display: -webkit-box //for safari
@@ -160,14 +162,59 @@ $first-flex-back: #a9947b
 
 .first-flex-container
   @extend %flex-crossbrowser
-  outline: 1px solid red
+  outline: 5px solid $first-flex-border
   padding: 0
   margin: 20px
   background-color: $first-flex-back
   list-style: none
-  height: 300px
+  width: calc(100% - 25px)
   position: relative
   float: left
   -webkit-flex-flow: row wrap
+  flex-flow: row wrap
   justify-content: space-around
+
+.first-flex-items
+  +transition(all .2s ease)
+  background: $first-flex-border
+  color: $error-color
+  padding: 5px
+  width: 200px
+  height: 150px
+  margin-top: 10px
+  margin-bottom: 10px
+  line-height: 150px
+  font-weight: bold
+  font-size: 3em
+  text-align: center
+  cursor: pointer
+
+  &:hover
+    background-color: darken($first-flex-back, 2%)
   
+//For header stable navigation:
+.header-navigation
+  @extend %flex-crossbrowser
+  list-style: none
+  margin: 0
+  background: $header-background
+  -webkit-flex-flow: row wrap
+  justify-content: flex-end
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+
+  a
+    +transition(all .2s ease)
+    text-decoration: none
+    display: block
+    padding: 1em
+    color: $header-color
+    font-family: 'Abel', sans-serif 
+
+    &:hover
+      padding: calc(1em - 4px) 1em
+      border-bottom: 4px solid darken($header-background, 3%)
+
+
